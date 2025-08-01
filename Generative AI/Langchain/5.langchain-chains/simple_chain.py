@@ -2,6 +2,7 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
 from langchain_core.output_parsers import StrOutputParser
+from langchain.chains import LLMChain
 
 load_dotenv()
 
@@ -24,3 +25,4 @@ result = chain.invoke({"topic" : "black hole"})
 print(result)
 
 chain.get_graph().print_ascii()
+
