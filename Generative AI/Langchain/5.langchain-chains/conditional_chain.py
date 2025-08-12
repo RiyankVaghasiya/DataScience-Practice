@@ -49,6 +49,6 @@ branch_chain = RunnableBranch(
 # chain = classifier_chain | branch_chain
 chain = classifier_chain | RunnableLambda(lambda x: {'sentiment': x.sentiment, 'feedback': x}) | branch_chain
 
-result = chain.invoke({'feedback': 'This is a terrible phone'})
+result = chain.invoke({'feedback': 'This is a very good phone'})
 
 print(result)   
